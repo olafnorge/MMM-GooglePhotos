@@ -84,8 +84,7 @@ module.exports = NodeHelper.create({
       }
       for (var ta of this.config.albums) {
         var matched = albums.find((a)=>{
-          if (ta == a.title) return true
-          return false
+          return ta === a.id || ta === a.title
         })
         var exists = function (albums, album) {
           return albums.some(expected => album.id === expected.id)
