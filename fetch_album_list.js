@@ -10,7 +10,7 @@ var GPhotos = new GP({
 const steps = async() => {
   try {
     var albums = await GPhotos.getAlbums()
-    albums.forEach(album => console.log("Album name: " + album.title + " has ID:" + album.id));
+    albums.forEach(album => console.log("Album name: " + album.title + " has ID: " + album.id));
     process.exit()
   } catch (err) {
     console.log(err)
